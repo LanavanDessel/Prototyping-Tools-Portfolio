@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les 3 | Lost in Trainslation - Schermen verbeteren & feedback</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- CSS-bestanden -->
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/flexboxes.css">
+  <link rel="stylesheet" href="assets/nav.css">
+  <link rel="stylesheet" href="assets/typography.css">
+
+  <!-- Extra CSS voor donkerpaarse stijl -->
+  <style>
+    :root {
+      --primary:#2b2447;
+      --secondary: #f2efff;
+      --text: #2b2447;
+      --white: #ffffff;
+      --radius: 14px;
+      --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    body {
+      margin: 0;
+      font-family: "Roboto", sans-serif;
+      background: var(--secondary);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 40px;
+    }
+
+    .container {
+      display: flex;
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      width: 95%;
+      max-width: 1100px;
+    }
+
+    .title {
+      background: var(--primary);
+      color: var(--white);
+      font-family: "Poppins", sans-serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      text-align: center;
+      padding: 2rem 1rem;
+      width: 250px;
+    }
+
+    ul.vertical-buttons {
+      list-style: none;
+      margin: 0;
+      padding: 1.5rem;
+      background: #e7e1ff;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    ul.vertical-buttons li { width: 100%; }
+
+    ul.vertical-buttons a {
+      display: block;
+      text-align: center;
+      padding: 0.9rem 1rem;
+      border-radius: var(--radius);
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 500;
+      background: var(--white);
+      transition: all 0.25s ease;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+    }
+
+    ul.vertical-buttons a:hover,
+    ul.vertical-buttons a.active {
+      background: var(--primary);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    page {
+      flex: 1;
+      padding: 3rem;
+    }
+
+    h1 {
+      color: var(--primary);
+      font-family: "Poppins", sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      color:#2b2447;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      line-height: 1.8;
+      font-size: 1.05rem;
+      margin-bottom: 1.5rem;
+      color: #3b3362;
+    }
+
+    .two-columns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+
+    .column {
+      flex: 1;
+      min-width: 320px;
+      background: #f6f4ff;
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      transition: 0.3s ease;
+    }
+
+    .column:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    h3 {
+      color: var(--primary);
+      font-family: "Poppins", sans-serif;
+      margin-bottom: 0.8rem;
+    }
+
+    @media (max-width: 900px) {
+      .container { flex-direction: column; }
+      .title { width: 100%; }
+      ul.vertical-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      page { padding: 2rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <div>
+      <div class="title">Prototyping Tools</div>
+      <ul class="vertical-buttons">
+        <li><a href="index.html">Logboek</a></li>
+        <li><a href="W1.html">Les 1</a></li>
+        <li><a href="W2.html">Les 2</a></li>
+        <li><a href="W3.html" class="active">Les 3</a></li>
+      </ul>
+    </div>
+
+    <!-- Main Page -->
+    <page>
+      <h1>Lost in Trainslation – Schermen verbeteren in Figma & feedback ontvangen</h1>
+      <h2>Lana van Dessel</h2>
+      <p><strong>Datum:</strong> 9 oktober 2025</p>
+
+      <p>
+        Tijdens de derde les van Prototyping Tools kregen we de tijd om verder te werken aan ons Figma-project “Lost in Trainslation”.
+        Het doel was om de bestaande ontwerpen te verbeteren op basis van feedback en om twee nieuwe schermen toe te voegen.
+        Deze les draaide vooral om het toepassen van feedback, het versterken van visuele hiërarchie en het nadenken over hoe een ontwerp
+        beter kan communiceren met de gebruiker. Aan het einde kregen we ook een korte introductie tot het vak Software Tools.
+      </p>
+
+      <div class="two-columns">
+        <div class="column">
+          <h3>Wat ik heb gedaan</h3>
+          <p>
+            Aan het begin van de les bekeek ik mijn eerdere ontwerp kritisch en vergeleek ik het met voorbeelden van andere studenten.
+            Op basis van de feedback besloot ik om mijn scherm rustiger en professioneler te maken.
+            De treinillustratie die ik eerder gebruikte, bleek te druk en niet helemaal passend bij het thema van functionele reisinformatie.
+            Ik koos ervoor om die te verwijderen en meer te focussen op een strakke lay-out met duidelijke kaders en genoeg witruimte.
+          </p>
+          <p>
+            Daarnaast werkte ik aan het kleurcontrast. De docent gaf aan dat mijn kleuren te licht waren, waardoor de tekst moeilijk leesbaar was.
+            Door donkerdere accenten en contrasterende vlakken toe te voegen, kwam de informatie beter naar voren.
+            Ook heb ik verschillende lettergroottes en gewichten getest om de hiërarchie tussen koppen, subkoppen en details te versterken.
+          </p>
+          <p>
+            Daarna ontwierp ik twee extra schermen: één met route-informatie en één met actuele storingsmeldingen.
+            Hierbij gebruikte ik componenten en auto-layout, zodat alles netjes bleef uitgelijnd en makkelijk aan te passen was.
+            Dit hielp me ook om efficiënter te werken. Tot slot nam ik kort deel aan de introductie over Software Tools,
+            waarin we leerden hoe onze ontwerpen later kunnen worden gekoppeld aan echte functionaliteit.
+          </p>
+        </div>
+
+        <div class="column">
+          <h3>Reflectie</h3>
+          <p>
+            Deze les heeft me geleerd hoe waardevol feedback is bij het verbeteren van een ontwerp.
+            In het begin was ik best tevreden over mijn eerste versie, maar na de opmerkingen van mijn docent zag ik ineens duidelijk
+            waar het beter kon. Door mijn ontwerp eenvoudiger te maken, oogt het nu volwassener en sluit het beter aan bij de gebruiker.
+          </p>
+          <p>
+            Ook besefte ik dat kleuren, typografie en contrast niet alleen esthetisch zijn, maar vooral functioneel.
+            Een goed ontwerp moet informatie begrijpelijk en toegankelijk maken — niet alleen mooi zijn.
+            Het oefenen met contrast en lettertypes heeft me geholpen om meer aandacht te besteden aan leesbaarheid
+            en de manier waarop mensen informatie waarnemen.
+          </p>
+          <p>
+            Voor de volgende les wil ik me focussen op <strong>interactiviteit</strong>.
+            Ik wil knoppen en overgangen toevoegen, zodat het ontwerp niet alleen visueel duidelijk is,
+            maar ook echt aanvoelt als een werkend systeem. Daarnaast wil ik mijn ontwerp aan klasgenoten laten testen,
+            om te zien of zij de informatie net zo logisch en duidelijk vinden als ik zelf.
+            Dit zal me helpen om mijn ontwerp nog gebruiksvriendelijker te maken.
+          </p>
+        </div>
+      </div>
+    </page>
+  </div>
+</body>
+</html>
