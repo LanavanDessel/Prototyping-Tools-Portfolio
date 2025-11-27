@@ -1,235 +1,98 @@
-<!<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Les 4 | Webpagina’s maken met HTML en CSS</title>
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
-
-  <!-- CSS-bestanden -->
-  <link rel="stylesheet" href="assets/styles.css">
-  <link rel="stylesheet" href="assets/flexboxes.css">
-  <link rel="stylesheet" href="assets/nav.css">
-  <link rel="stylesheet" href="assets/typography.css">
-
-  <!-- Extra CSS voor donkerpaarse stijl -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --primary:#2b2447;
-      --secondary: #f2efff;
-      --text: #2b2447;
-      --white: #ffffff;
-      --radius: 14px;
-      --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    }
-
-    body {
-      margin: 0;
-      font-family: "Roboto", sans-serif;
-      background: var(--secondary);
-      color: var(--text);
-      display: flex;
-      justify-content: center;
-      min-height: 100vh;
-      padding: 40px;
-    }
-
-    .container {
-      display: flex;
-      background: var(--white);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      width: 95%;
-      max-width: 1100px;
-    }
-
-    .title {
-      background: var(--primary);
-      color: var(--white);
-      font-family: "Poppins", sans-serif;
-      font-size: 1.8rem;
-      font-weight: 700;
-      text-align: center;
-      padding: 2rem 1rem;
-      width: 250px;
-    }
-
-    ul.vertical-buttons {
-      list-style: none;
-      margin: 0;
-      padding: 1.5rem;
-      background: #e7e1ff;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;
-    }
-
-    ul.vertical-buttons li { width: 100%; }
-
-    ul.vertical-buttons a {
-      display: block;
-      text-align: center;
-      padding: 0.9rem 1rem;
-      border-radius: var(--radius);
-      text-decoration: none;
-      color: var(--primary);
-      font-weight: 500;
-      background: var(--white);
-      transition: all 0.25s ease;
-      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
-    }
-
-    ul.vertical-buttons a:hover,
-    ul.vertical-buttons a.active {
-      background: var(--primary);
-      color: var(--white);
-      transform: translateY(-2px);
-    }
-
-    page {
-      flex: 1;
-      padding: 3rem;
-    }
-
-    h1 {
-      color: var(--primary);
-      font-family: "Poppins", sans-serif;
-      font-size: 2.2rem;
-      margin-bottom: 0.5rem;
-    }
-
-    h2 {
-      color:#2b2447;
-      font-weight: 500;
-      margin-bottom: 1.5rem;
-    }
-
-    p {
-      line-height: 1.8;
-      font-size: 1.05rem;
-      margin-bottom: 1.5rem;
-      color: #3b3362;
-    }
-
-    .two-columns {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      margin-top: 1.5rem;
-    }
-
-    .column {
-      flex: 1;
-      min-width: 320px;
-      background: #f6f4ff;
-      padding: 2rem;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      transition: 0.3s ease;
-    }
-
-    .column:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    }
-
-    h3 {
-      color: var(--primary);
-      font-family: "Poppins", sans-serif;
-      margin-bottom: 0.8rem;
-    }
-
-    @media (max-width: 900px) {
-      .container { flex-direction: column; }
-      .title { width: 100%; }
-      ul.vertical-buttons {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      page { padding: 2rem; }
-    }
+    body { font-family: 'Roboto', sans-serif; }
+    .title { font-family: 'Poppins', sans-serif; }
+    h1, h3 { font-family: 'Poppins', sans-serif; }
   </style>
 </head>
 
-<body>
-  <div class="container">
+<body class="bg-[#edeaf5] text-[#2d2242] min-h-screen flex justify-center p-10">
+
+  <!-- Container -->
+  <div class="flex bg-white rounded-[14px] shadow-md overflow-hidden w-[95%] max-w-[1200px]">
+
     <!-- Sidebar -->
     <div>
-      <div class="title">Prototyping Tools</div>
-      <ul class="vertical-buttons">
-        <li><a href="index.html">Logboek</a></li>
-        <li><a href="W1.html">Les 1</a></li>
-        <li><a href="W2.html">Les 2</a></li>
-        <li><a href="W3.html">Les 3</a></li>
-        <li><a href="W4.html" class="active">Les 4</a></li>
+      <div class="title bg-[#2d2242] text-white text-center text-2xl font-bold p-8 w-[260px] tracking-wide">
+        Prototyping Tools
+      </div>
+
+      <ul class="list-none m-0 p-6 bg-[#edeaf5] flex flex-col items-center gap-3 h-full">
+        <li class="w-full"><a href="index.html" class="block text-center p-4 rounded-xl bg-white text-[#2d2242] font-medium shadow hover:bg-[#2d2242] hover:text-white transition">Logboek</a></li>
+        <li class="w-full"><a href="W1.html" class="block text-center p-4 rounded-xl bg-white text-[#2d2242] font-medium shadow hover:bg-[#2d2242] hover:text-white transition">Les 1</a></li>
+        <li class="w-full"><a href="W2.html" class="block text-center p-4 rounded-xl bg-white text-[#2d2242] font-medium shadow hover:bg-[#2d2242] hover:text-white transition">Les 2</a></li>
+        <li class="w-full"><a href="W3.html" class="block text-center p-4 rounded-xl bg-white text-[#2d2242] font-medium shadow hover:bg-[#2d2242] hover:text-white transition">Les 3</a></li>
+        <li class="w-full"><a href="W4.html" class="block text-center p-4 rounded-xl bg-[#2d2242] text-white font-medium shadow transition">Les 4</a></li>
+        <li class="w-full"><a class="block text-center p-4 rounded-xl bg-white text-[#2d2242] font-medium shadow hover:bg-[#2d2242] hover:text-white transition" href="W5.html">Les 5</a></li>
       </ul>
     </div>
 
     <!-- Main Page -->
-    <page>
-      <h1>Webpagina’s maken met HTML en CSS</h1>
-      <h2>Lana van Dessel</h2>
-      <p><strong>Datum:</strong> 16 oktober 2025</p>
+    <main class="flex-1 p-12">
+      <h1 class="text-4xl font-bold mb-2 text-[#2d2242]">Webpagina’s maken met HTML en CSS</h1>
+      <h2 class="text-[#2d2242] font-medium mb-6">Lana van Dessel</h2>
+      <p class="leading-7 text-[1rem] mb-6"><strong>Datum:</strong> 16 oktober 2025</p>
 
-      <p>
-        Tijdens de vierde les van Prototyping Tools leerden we hoe we onze ontwerpen kunnen omzetten in echte webpagina’s.
-        De focus lag op <strong>HTML</strong> en <strong>CSS</strong> — de twee basistalen waarmee websites worden opgebouwd en vormgegeven.
-        Het doel was om een digitale versie van ons logboek te maken, waarbij we alle lessen en reflecties overzichtelijk konden presenteren.
+      <p class="leading-7 text-[1.05rem] mb-6">
+        Tijdens de vierde les van Prototyping Tools leerden we hoe we onze ontwerpen kunnen omzetten in echte webpagina’s. 
+        De focus lag op <strong>HTML</strong> en <strong>CSS</strong> — de twee basistalen waarmee websites worden opgebouwd en vormgegeven. 
+        Het doel was om een digitale versie van ons logboek te maken, waarbij we alle lessen en reflecties overzichtelijk konden presenteren. 
         Deze les ging dus niet alleen over code, maar ook over structuur, overzicht en de manier waarop inhoud en vorm samenwerken.
       </p>
 
-      <div class="two-columns">
-        <div class="column">
-          <h3>Wat ik heb gedaan</h3>
-          <p>
-            We begonnen met een duidelijke uitleg over de opbouw van een HTML-document: de head, body en verschillende elementen zoals
-            &lt;header&gt;, &lt;main&gt; en &lt;footer&gt;. Daarna gingen we stap voor stap aan de slag met het maken van onze eigen webpagina.
+      <div class="flex flex-wrap gap-6 mt-6">
+        <!-- Column 1 -->
+        <div class="flex-1 min-w-[320px] bg-[#f8f6fc] p-6 rounded-[14px] shadow-md transition hover:-translate-y-1 hover:shadow-xl">
+          <h3 class="text-2xl font-bold mb-3 text-[#2d2242]">Wat ik heb gedaan</h3>
+          <p class="leading-7 mb-4">
+            We begonnen met een duidelijke uitleg over de opbouw van een HTML-document: de head, body en verschillende elementen zoals &lt;header&gt;, &lt;main&gt; en &lt;footer&gt;. 
+            Daarna gingen we stap voor stap aan de slag met het maken van onze eigen webpagina. 
             Ik koos ervoor om mijn logboek uit eerdere lessen als basis te nemen en dit om te zetten naar een echte website met meerdere pagina’s.
           </p>
-          <p>
-            Vervolgens leerden we hoe je CSS kunt gebruiken om de website visueel aantrekkelijk te maken.
-            Ik experimenteerde met lettertypes, kleuren en marges om alles beter op elkaar af te stemmen.
-            Ook probeerde ik om de navigatie duidelijk te maken met knoppen die er netjes en modern uitzagen.
-            In het begin was het lastig om de juiste opmaak te vinden, vooral omdat kleine fouten in de code meteen invloed hebben op de hele lay-out.
+          <p class="leading-7 mb-4">
+            Vervolgens leerden we hoe je CSS kunt gebruiken om de website visueel aantrekkelijk te maken. 
+            Ik experimenteerde met lettertypes, kleuren en marges om alles beter op elkaar af te stemmen. 
+            Ook probeerde ik om de navigatie duidelijk te maken met knoppen die er netjes en modern uitzagen. 
+            In het begin was het lastig om de juiste opmaak te vinden, vooral omdat kleine fouten in de code meteen invloed hebben op de hele lay-out. 
             Toch begon ik steeds beter te begrijpen hoe HTML en CSS samenwerken.
           </p>
-          <p>
-            Daarnaast oefende ik met het gebruik van <strong>flexbox</strong> om kolommen en secties goed uit te lijnen.
-            Dat was nieuw voor mij, maar ik merkte al snel hoe handig het is om een website flexibel te maken,
-            zodat hij ook goed werkt op verschillende schermgroottes. Aan het einde van de les had ik een eerste versie van mijn logboekwebsite klaar.
+          <p class="leading-7">
+            Daarnaast oefende ik met het gebruik van <strong>flexbox</strong> om kolommen en secties goed uit te lijnen. 
+            Dat was nieuw voor mij, maar ik merkte al snel hoe handig het is om een website flexibel te maken, zodat hij ook goed werkt op verschillende schermgroottes. 
+            Aan het einde van de les had ik een eerste versie van mijn logboekwebsite klaar. 
             Het zag er nog niet perfect uit, maar het voelde goed om te zien dat mijn ontwerp uit Figma nu echt begon te “leven” op het scherm.
           </p>
         </div>
 
-        <div class="column">
-          <h3>Reflectie</h3>
-          <p>
-            Deze les vond ik erg interessant, maar ook uitdagend. In het begin voelde HTML en CSS best technisch aan,
-            vooral omdat ik gewend was om te werken met visuele tools zoals Figma. Toch merkte ik dat het werken met code
-            me meer inzicht gaf in hoe websites echt zijn opgebouwd. Het gaf me een gevoel van controle en creativiteit tegelijk —
-            alsof ik niet alleen iets ontwerp, maar het ook echt tot leven breng.
+        <!-- Column 2 -->
+        <div class="flex-1 min-w-[320px] bg-[#f8f6fc] p-6 rounded-[14px] shadow-md transition hover:-translate-y-1 hover:shadow-xl">
+          <h3 class="text-2xl font-bold mb-3 text-[#2d2242]">Reflectie</h3>
+          <p class="leading-7 mb-4">
+            Deze les vond ik erg interessant, maar ook uitdagend. In het begin voelde HTML en CSS best technisch aan, vooral omdat ik gewend was om te werken met visuele tools zoals Figma. 
+            Toch merkte ik dat het werken met code me meer inzicht gaf in hoe websites echt zijn opgebouwd. 
+            Het gaf me een gevoel van controle en creativiteit tegelijk — alsof ik niet alleen iets ontwerp, maar het ook echt tot leven breng.
           </p>
-          <p>
-            Wat ik nog lastig vond, is het behouden van overzicht in mijn code. Soms raakte ik de draad kwijt
-            door alle tags, haakjes en klassennamen. Daarom heb ik geleerd om mijn HTML netjes te structureren
-            met inspringingen en duidelijke namen voor onderdelen. Ook heb ik beter begrepen hoe belangrijk het is
-            om consequent te werken met stijlen in CSS, zodat de website overzichtelijk en professioneel blijft.
+          <p class="leading-7 mb-4">
+            Wat ik nog lastig vond, is het behouden van overzicht in mijn code. Soms raakte ik de draad kwijt door alle tags, haakjes en klassennamen. 
+            Daarom heb ik geleerd om mijn HTML netjes te structureren met inspringingen en duidelijke namen voor onderdelen. 
+            Ook heb ik beter begrepen hoe belangrijk het is om consequent te werken met stijlen in CSS, zodat de website overzichtelijk en professioneel blijft.
           </p>
-          <p>
-            Voor de volgende lessen wil ik me verder verdiepen in <strong>CSS-layouts</strong>, zoals grid en geavanceerde animaties.
-            Daarnaast wil ik leren hoe ik mijn website interactiever kan maken — bijvoorbeeld door knoppen die bewegen of kleur veranderen.
-            Mijn doel is om een website te maken die niet alleen informatief is, maar ook prettig aanvoelt voor de gebruiker.
+          <p class="leading-7">
+            Voor de volgende lessen wil ik me verder verdiepen in <strong>CSS-layouts</strong>, zoals grid en geavanceerde animaties. 
+            Daarnaast wil ik leren hoe ik mijn website interactiever kan maken — bijvoorbeeld door knoppen die bewegen of kleur veranderen. 
+            Mijn doel is om een website te maken die niet alleen informatief is, maar ook prettig aanvoelt voor de gebruiker. 
             Deze les heeft me echt gemotiveerd om meer te leren over webdevelopment en om te zien hoe design en techniek samenkomen.
           </p>
         </div>
       </div>
-    </page>
+    </main>
   </div>
 </body>
 </html>

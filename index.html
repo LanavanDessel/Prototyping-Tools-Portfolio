@@ -4,242 +4,60 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Prototyping Tools | Lana van Dessel</title>
-
-  <!-- Fonts -->
+  <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
-
-  <!-- CSS-bestanden -->
-  <link rel="stylesheet" href="assets/styles.css" />
-  <link rel="stylesheet" href="assets/flexboxes.css" />
-  <link rel="stylesheet" href="assets/nav.css" />
-  <link rel="stylesheet" href="assets/typography.css" />
-
-  <!-- Professionele stijl -->
   <style>
-    :root {
-      --primary: #2d2242;      /* paars accent */
-      --primary-dark: #2d2242;  /* donkerpaars */
-      --secondary: #f4f1ec;     /* zacht beige */
-      --text:#2d2242;
-      --white: #fff;
-      --radius: 14px;
-      --shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-    }
-
-    body {
-      margin: 0;
-      font-family: "Roboto", sans-serif;
-      background: var(--secondary);
-      color: var(--text);
-      display: flex;
-      justify-content: center;
-      min-height: 100vh;
-      padding: 40px;
-    }
-
-    .container {
-      display: flex;
-      background: var(--white);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      width: 95%;
-      max-width: 1200px;
-    }
-
-    /* Sidebar */
-    .title {
-      background: var(--primary-dark);
-      color: var(--white);
-      font-family: "Poppins", sans-serif;
-      font-size: 1.8rem;
-      font-weight: 700;
-      text-align: center;
-      padding: 2.2rem 1rem;
-      width: 260px;
-      letter-spacing: 0.5px;
-    }
-
-    ul.vertical-buttons {
-      list-style: none;
-      margin: 0;
-      padding: 1.5rem;
-      background: #edeaf5;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;
-    }
-
-    ul.vertical-buttons li {
-      width: 100%;
-    }
-
-    ul.vertical-buttons a {
-      display: block;
-      text-align: center;
-      padding: 0.9rem 1rem;
-      border-radius: var(--radius);
-      text-decoration: none;
-      color: var(--primary-dark);
-      font-weight: 500;
-      background: var(--white);
-      transition: all 0.25s ease;
-      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
-    }
-
-    ul.vertical-buttons a:hover {
-      background: var(--primary);
-      color: var(--white);
-      transform: translateY(-2px);
-    }
-
-    /* Main content */
-    page {
-      flex: 1;
-      padding: 3rem;
-    }
-
-    h1 {
-      color: var(--primary-dark);
-      font-family: "Poppins", sans-serif;
-      font-size: 2.3rem;
-      margin-bottom: 0.5rem;
-    }
-
-    h2 {
-      color: #2d2242;
-      font-weight: 500;
-      margin-bottom: 2rem;
-    }
-
-    p {
-      line-height: 1.8;
-      font-size: 1.05rem;
-      margin-bottom: 1.5rem;
-      color: #2d2242;
-    }
-
-    .two-columns {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .column {
-      flex: 1;
-      min-width: 320px;
-      background: #f8f6fc;
-      padding: 1.8rem;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      transition: 0.3s ease;
-    }
-
-    .column:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
-    }
-
-    h3 {
-      color: var(--primary-dark);
-      font-family: "Poppins", sans-serif;
-      margin-bottom: 0.8rem;
-    }
-
-    @media (max-width: 900px) {
-      .container {
-        flex-direction: column;
-      }
-
-      .title {
-        width: 100%;
-      }
-
-      ul.vertical-buttons {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
-      page {
-        padding: 2rem;
-      }
-    }
+    body { font-family: 'Roboto', sans-serif; }
+    .title { font-family: 'Poppins', sans-serif; }
+    h1, h3 { font-family: 'Poppins', sans-serif; }
   </style>
 </head>
 
-<body>
-  <div class="container">
-    <!-- Sidebar -->
+<body class="bg-[#f4f1ec] text-[#2d2242] flex justify-center min-h-screen p-10">
+  <div class="flex bg-white rounded-xl shadow-xl overflow-hidden w-[95%] max-w-[1200px]">
+
     <div>
-      <div class="title">Prototyping Tools</div>
-      <ul class="vertical-buttons">
-        <li><a href="index.html">Logboek</a></li>
-        <li><a href="W1.html">Les 1</a></li>
-        <li><a href="W2.html">Les 2</a></li>
-        <li><a href="W3.html">Les 3</a></li>
-        <li><a href="W4.html">Les 4</a></li>
+      <div class="title bg-[#2d2242] text-white text-center text-2xl font-bold p-8 w-[260px] tracking-wide">
+        Prototyping Tools
+      </div>
+
+      <ul class="list-none m-0 p-6 bg-[#edeaf5] flex flex-col items-center gap-3 h-full">
+        <li class="w-full"><a class="block text-center p-4 rounded-xl bg-white text-[#2d2242] font-medium shadow hover:bg-[#2d2242] hover:text-white transition" href="index.html">Logboek</a></li>
+        <li class="w-full"><a class="block text-center p-4 rounded-xl bg-white text-[#2d2242] font-medium shadow hover:bg-[#2d2242] hover:text-white transition" href="W1.html">Les 1</a></li>
+        <li class="w-full"><a class="block text-center p-4 rounded-xl bg-white text-[#2d2242] font-medium shadow hover:bg-[#2d2242] hover:text-white transition" href="W2.html">Les 2</a></li>
+        <li class="w-full"><a class="block text-center p-4 rounded-xl bg-white text-[#2d2242] font-medium shadow hover:bg-[#2d2242] hover:text-white transition" href="W3.html">Les 3</a></li>
+        <li class="w-full"><a class="block text-center p-4 rounded-xl bg-white text-[#2d2242] font-medium shadow hover:bg-[#2d2242] hover:text-white transition" href="W4.html">Les 4</a></li>
+        <li class="w-full"><a class="block text-center p-4 rounded-xl bg-white text-[#2d2242] font-medium shadow hover:bg-[#2d2242] hover:text-white transition" href="W5.html">Les 5</a></li>
       </ul>
     </div>
 
-    <!-- Main Page -->
-    <page>
-      <h1>Homepage</h1>
-      <h2>Lana van Dessel</h2>
+    <main class="flex-1 p-12">
+      <h1 class="text-4xl font-bold mb-2 text-[#2d2242]">Homepage</h1>
+      <h2 class="text-xl font-medium mb-8">Lana van Dessel</h2>
 
-      <p>
-        Welkom op mijn website over <strong>Prototyping Tools</strong>. 
-        Hier laat ik zien wat ik leer in de lessen en hoe ik stap voor stap beter word 
-        in het maken van digitale ontwerpen. In dit logboek schrijf ik over wat ik doe, 
-        welke programma’s ik gebruik en wat ik heb geleerd tijdens het proces.
+      <p class="leading-7 text-[1.05rem] mb-6">
+        Welkom op mijn website over <strong>Prototyping Tools</strong>. Hier laat ik zien wat ik leer in de lessen en hoe ik stap voor stap beter word in het maken van digitale ontwerpen.
       </p>
 
-      <p>
-        Tijdens deze lessen werk ik met tools zoals <strong>Figma</strong>
-        <strong>Miro</strong> en <strong>Adobe XD</strong>. Met deze programma’s 
-        maak ik digitale prototypes van apps of websites. Zo kan ik mijn ideeën testen 
-        en verbeteren voordat ik een echt ontwerp maak. 
-        Ik leer hoe ik kleuren, vormen en tekst goed kan combineren, 
-        zodat mijn ontwerpen duidelijk en makkelijk te gebruiken zijn.
+      <p class="leading-7 text-[1.05rem] mb-6">
+        Tijdens deze lessen werk ik met tools zoals <strong>Figma</strong>, <strong>Miro</strong> en <strong>Adobe XD</strong>. Met deze programma’s maak ik digitale prototypes en test ik mijn ideeën voordat ik een definitief ontwerp maak.
       </p>
 
-      <div class="two-columns">
-        <div class="column">
-          <h3>Hoe ik werk</h3>
-          <p>
-            Meestal begin ik met een schets op papier om mijn eerste ideeën te bedenken. 
-            Daarna maak ik een simpele versie in Figma. 
-            Daarin test ik wat goed werkt en wat niet. 
-            Ik probeer verschillende opzetten uit en kies daarna de beste.
-          </p>
-          <p>
-            Tijdens dit proces leer ik om goed te plannen en overzicht te houden. 
-            Ik werk met stijlen en kleuren die bij elkaar passen 
-            en zorg dat mijn ontwerp logisch is opgebouwd. 
-            Zo wordt het stap voor stap beter.
-          </p>
+      <div class="flex flex-wrap gap-8 mt-8">
+        <div class="flex-1 min-w-[320px] bg-[#f8f6fc] p-8 rounded-xl shadow transition hover:-translate-y-1 hover:shadow-xl">
+          <h3 class="text-2xl font-bold mb-3 text-[#2d2242]">Hoe ik werk</h3>
+          <p class="leading-7 mb-4">Ik begin meestal met schetsen op papier. Daarna bouw ik een digitale versie in Figma, waar ik test wat goed werkt. Ik probeer verschillende varianten en kies de beste.</p>
+          <p class="leading-7">Tijdens dit proces leer ik plannen, structureren en ontwerpen met passende stijlen en kleuren.</p>
         </div>
 
-        <div class="column">
-          <h3>Wat ik leer</h3>
-          <p>
-            Door elke week te oefenen, leer ik beter hoe ik ideeën kan omzetten in echte ontwerpen. 
-            Ook leer ik samenwerken, feedback geven en ontvangen, 
-            en hoe ik mijn werk duidelijk kan uitleggen. 
-            Dat is belangrijk als ik later met echte projecten werk.
-          </p>
-          <p>
-            Mijn doel is om een mooi en duidelijk prototype te maken 
-            dat laat zien hoe een app of website eruit kan zien en werkt. 
-            In dit logboek kun je mijn vooruitgang volgen en zien 
-            welke stappen ik heb gezet om dat te bereiken.
-          </p>
+        <div class="flex-1 min-w-[320px] bg-[#f8f6fc] p-8 rounded-xl shadow transition hover:-translate-y-1 hover:shadow-xl">
+          <h3 class="text-2xl font-bold mb-3 text-[#2d2242]">Wat ik leer</h3>
+          <p class="leading-7 mb-4">Door elke week te oefenen, leer ik mijn ideeën om te zetten in echte ontwerpen. Ik leer ook samenwerken, feedback geven en mijn werk presenteren.</p>
+          <p class="leading-7">Mijn doel is een duidelijk en aantrekkelijk prototype maken dat toont hoe een app of website werkt.</p>
         </div>
       </div>
-    </page>
+    </main>
+
   </div>
 </body>
 </html>
