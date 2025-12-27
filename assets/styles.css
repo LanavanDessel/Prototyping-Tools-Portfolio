@@ -1,158 +1,179 @@
-
+/* Import van fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-body{
-    background-color: rgb(137, 191, 228);
-    color: #161717;
-    height:auto;
-    min-height:100vh;
+/* Root variabelen */
+:root {
+    --primary: #2d2242;
+    --primary-dark: #2d2242;
+    --secondary: #f4f1ec;
+    --text: #2d2242;
+    --white: #fff;
+    --radius: 14px;
+    --shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
+
+/* Body styling met statische gradient achtergrond */
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px;
+
+    /* Gradient achtergrond afgestemd op kleuren van de stijl */
+    background: linear-gradient(135deg, #2d2242, #edeaf5, #f4f1ec);
+}
+
 /* Container styling */
 .container {
+    display: flex;
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    width: 95%;
+    max-width: 1200px;
     font-family: "Playfair Display", serif;
-    max-width: 65vw;
-    margin-left: 10vw;
-    margin-right: auto;
 }
 
+/* Titel styling */
 .title {
-    font-family: "Inter", sans-serif;
-    font-size: 1em;
-    font-weight: bold;
-    text-transform: capitalize;
-    margin-top: 2em;
+    background: var(--primary-dark);
+    color: var(--white);
+    font-family: "Poppins", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 2.2rem 1rem;
+    width: 260px;
+    letter-spacing: 0.5px;
 }
 
+/* Verticale knoppen */
+ul.vertical-buttons {
+    list-style: none;
+    margin: 0;
+    padding: 1.5rem;
+    background: #edeaf5;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
 
-:root {
-      --primary: #2d2242;
-      --primary-dark: #2d2242;
-      --secondary: #f4f1ec;
-      --text: #2d2242;
-      --white: #fff;
-      --radius: 14px;
-      --shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-    }
+ul.vertical-buttons li {
+    width: 100%;
+}
 
-    body {
-      margin: 0;
-      font-family: "Roboto", sans-serif;
-      background: var(--secondary);
-      color: var(--text);
-      display: flex;
-      justify-content: center;
-      min-height: 100vh;
-      padding: 40px;
-    }
+ul.vertical-buttons a {
+    display: block;
+    text-align: center;
+    padding: 0.9rem 1rem;
+    border-radius: var(--radius);
+    text-decoration: none;
+    color: var(--primary-dark);
+    font-weight: 500;
+    background: var(--white);
+    transition: all 0.25s ease;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+}
 
-    .container {
-      display: flex;
-      background: var(--white);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      width: 95%;
-      max-width: 1200px;
-    }
+ul.vertical-buttons a:hover {
+    background: var(--primary);
+    color: var(--white);
+    transform: translateY(-2px);
+}
 
-    .title {
-      background: var(--primary-dark);
-      color: var(--white);
-      font-family: "Poppins", sans-serif;
-      font-size: 1.8rem;
-      font-weight: 700;
-      text-align: center;
-      padding: 2.2rem 1rem;
-      width: 260px;
-      letter-spacing: 0.5px;
-    }
+/* Pagina content */
+page {
+    flex: 1;
+    padding: 3rem;
+}
 
-    ul.vertical-buttons {
-      list-style: none;
-      margin: 0;
-      padding: 1.5rem;
-      background: #edeaf5;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;
-    }
+h1 {
+    color: var(--primary-dark);
+    font-family: "Poppins", sans-serif;
+    font-size: 2.3rem;
+    margin-bottom: 0.5rem;
+}
 
-    ul.vertical-buttons li {
-      width: 100%;
-    }
+h2 {
+    color: #2d2242;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
 
-    ul.vertical-buttons a {
-      display: block;
-      text-align: center;
-      padding: 0.9rem 1rem;
-      border-radius: var(--radius);
-      text-decoration: none;
-      color: var(--primary-dark);
-      font-weight: 500;
-      background: var(--white);
-      transition: all 0.25s ease;
-      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
-    }
+p {
+    line-height: 1.8;
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+    color: #2d2242;
+}
 
-    ul.vertical-buttons a:hover {
-      background: var(--primary);
-      color: var(--white);
-      transform: translateY(-2px);
-    }
+/* Twee kolommen layout */
+.two-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
 
-    page {
-      flex: 1;
-      padding: 3rem;
-    }
+.column {
+    flex: 1;
+    min-width: 320px;
+    background: #f8f6fc;
+    padding: 1.8rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: 0.3s ease;
+}
 
-    h1 {
-      color: var(--primary-dark);
-      font-family: "Poppins", sans-serif;
-      font-size: 2.3rem;
-      margin-bottom: 0.5rem;
-    }
+.column:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
 
-    h2 {
-      color: #2d2242;
-      font-weight: 500;
-      margin-bottom: 2rem;
-    }
+h3 {
+    color: var(--primary-dark);
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 0.8rem;
+}
 
-    p {
-      line-height: 1.8;
-      font-size: 1.05rem;
-      margin-bottom: 1.5rem;
-      color: #2d2242;
-    }
+.github-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 
-    .two-columns {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      margin-top: 2rem;
-    }
+  background-color: #2d2242;
+  color: #edeaf5;
 
-    .column {
-      flex: 1;
-      min-width: 320px;
-      background: #f8f6fc;
-      padding: 1.8rem;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      transition: 0.3s ease;
-    }
+  padding: 12px 22px;
+  border-radius: 12px;
 
-    .column:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
-    }
+  font-weight: 700;
+  text-decoration: none;
 
-    h3 {
-      color: var(--primary-dark);
-      font-family: "Poppins", sans-serif;
-      margin-bottom: 0.8rem;
-    }
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.github-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px #2d2242(88, 166, 255, 0.4);
+}
+
+.github-btn:hover i {
+  animation: wiggle 0.4s ease;
+}
+
+@keyframes wiggle {
+  0% { transform: rotate(0); }
+  25% { transform: rotate(-10deg); }
+  50% { transform: rotate(10deg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0); }
+}
