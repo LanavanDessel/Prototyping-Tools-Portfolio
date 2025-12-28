@@ -177,3 +177,67 @@ h3 {
   75% { transform: rotate(-5deg); }
   100% { transform: rotate(0); }
 }
+
+.download-btn {
+  display: inline-block;
+  padding: 10px 16px;
+  background-color:#edeaf5;
+  color: #2d2242;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.download-btn:hover {
+  background-color: #edeaf5;
+}
+
+.download-container {
+  margin-top: 40px;      /* ruimte boven het vakje */
+  padding-bottom: 20px;  /* ruimte ín het vakje */
+  text-align: center;    /* knop netjes centreren */
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #edeaf5;
+  color: #2d2242;
+  text-decoration: none;
+  border-radius: 6px;
+   font-weight: 500;
+}
+
+.download-btn:hover {
+  background-color: #edeaf5;
+}
+
+.downloads-wrapper {
+  margin-top: 60px;          /* ruimte boven de downloads */
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;   /* 👈 verticaal */
+  align-items: center;      /* knoppen mooi gecentreerd */
+  gap: 15px;                /* ruimte tussen de knoppen */
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #edeaf5;
+  color: #2d2242;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+
+  /* 👇 animatie */
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.download-btn:hover {
+  background-color: #edeaf5;
+  transform: translateY(-4px); /* knop beweegt omhoog */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+
